@@ -1,5 +1,5 @@
 
-def call(){
+
     /*
     Project details
     PROJECT_TITLE: Name of your parent project
@@ -62,4 +62,3 @@ def call(){
     env.RELEASE_NAME = "${TEMP.replace('.', '-')}"
     env.JOB_PATH = "microservice/jobs/masterbranch/branches/${RELEASE_NAME}.*"
     env.RECIPIENT_EMAIL = "charlotte@sentient.io"
-}
