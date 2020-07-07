@@ -1,4 +1,6 @@
-/*
+
+def call(){
+    /*
     Project details
     PROJECT_TITLE: Name of your parent project
     BRANCH: Name of the branch/environement (This is only needed if using tagging system)
@@ -34,6 +36,7 @@
     == Image options ==
     1. IMAGE_TAG: Ensure this is the same as the one in your config.yaml
     */
+    env.APP_TAG = "v0.1.0"
     env.IMAGE_TAG = "gcr.io/${PROJECT_TITLE}/${APP_NAME}:${APP_TAG}"
 
 
@@ -59,3 +62,4 @@
     env.RELEASE_NAME = "${TEMP.replace('.', '-')}"
     env.JOB_PATH = "microservice/jobs/masterbranch/branches/${RELEASE_NAME}.*"
     env.RECIPIENT_EMAIL = "charlotte@sentient.io"
+}
